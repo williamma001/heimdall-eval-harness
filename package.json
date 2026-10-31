@@ -1,0 +1,14 @@
+{
+  "name": "heimdall-eval-harness",
+  "version": "1.0.0",
+  "description": "Evaluation harness for an LLM extractor that maps job-posting requirements to a fixed skills taxonomy, scoring both correct mapping and correct abstention.",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node tests/demand-mapping-eval.test.mjs",
+    "eval": "node eval/demand-mapping/run.mjs",
+    "eval:live": "node eval/demand-mapping/run.mjs --live --model gpt-4o-mini --model gpt-4o"
+  },
+  "license": "MIT"
+}

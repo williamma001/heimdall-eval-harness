@@ -1,0 +1,315 @@
+{
+  "predictor": "keyword-overlap+name-guard",
+  "metrics": {
+    "accuracy": 0.8333,
+    "mapping_precision": 0.7931,
+    "mapping_recall": 0.8519,
+    "mapping_f1": 0.8214,
+    "abstention_precision": 0.9231,
+    "abstention_recall": 0.8,
+    "false_positive_rate": 0.2
+  },
+  "counts": {
+    "correct_map": 23,
+    "wrong_map": 3,
+    "missed_map": 1,
+    "correct_abstain": 12,
+    "false_positive": 3
+  },
+  "per_case": [
+    {
+      "id": "aa-evals",
+      "category": "genuine_fit",
+      "expected": "Evaluation",
+      "predicted": null,
+      "outcome": "missed_map"
+    },
+    {
+      "id": "aa-strong-python",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "aa-llms",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "aa-notebook-to-live",
+      "category": "ontology_gap",
+      "expected": null,
+      "predicted": "Production Debugging",
+      "outcome": "false_positive"
+    },
+    {
+      "id": "fit-rest-api",
+      "category": "genuine_fit",
+      "expected": "API Design",
+      "predicted": "API Design",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-oauth-sso",
+      "category": "genuine_fit",
+      "expected": "Authentication",
+      "predicted": "Authentication",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-rbac",
+      "category": "genuine_fit",
+      "expected": "Authorization",
+      "predicted": "Authorization",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-schema",
+      "category": "genuine_fit",
+      "expected": "Database Design",
+      "predicted": "Database Design",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-idempotency",
+      "category": "genuine_fit",
+      "expected": "Idempotency",
+      "predicted": "Idempotency",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-queues",
+      "category": "genuine_fit",
+      "expected": "Job Scheduling",
+      "predicted": "Job Scheduling",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-tracing",
+      "category": "genuine_fit",
+      "expected": "Observability",
+      "predicted": "Observability",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-incidents",
+      "category": "genuine_fit",
+      "expected": "Production Debugging",
+      "predicted": "Production Debugging",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-gha",
+      "category": "genuine_fit",
+      "expected": "CI/CD",
+      "predicted": "CI/CD",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-rls",
+      "category": "genuine_fit",
+      "expected": "Database Security (Row-Level Security)",
+      "predicted": "Database Security (Row-Level Security)",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-prompts",
+      "category": "genuine_fit",
+      "expected": "Prompt/System Design",
+      "predicted": "Prompt/System Design",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-agents",
+      "category": "genuine_fit",
+      "expected": "Agent Orchestration",
+      "predicted": "Agent Orchestration",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-function-calling",
+      "category": "genuine_fit",
+      "expected": "Tool Use",
+      "predicted": "Tool Use",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-golden-sets",
+      "category": "genuine_fit",
+      "expected": "Evaluation",
+      "predicted": "Evaluation",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-rag",
+      "category": "genuine_fit",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-routing",
+      "category": "genuine_fit",
+      "expected": "Model Routing",
+      "predicted": "Model Routing",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-extraction",
+      "category": "genuine_fit",
+      "expected": "Structured Extraction",
+      "predicted": "Structured Extraction",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-interviews",
+      "category": "genuine_fit",
+      "expected": "Customer Discovery",
+      "predicted": "Customer Discovery",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-specs",
+      "category": "genuine_fit",
+      "expected": "Requirements",
+      "predicted": "Requirements",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-ab-tests",
+      "category": "genuine_fit",
+      "expected": "Experimental Design",
+      "predicted": "Experimental Design",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-closing",
+      "category": "genuine_fit",
+      "expected": "Sales",
+      "predicted": "Sales",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "para-double-charge",
+      "category": "genuine_fit",
+      "expected": "Idempotency",
+      "predicted": "API Design",
+      "outcome": "wrong_map"
+    },
+    {
+      "id": "para-model-swap",
+      "category": "genuine_fit",
+      "expected": "Evaluation",
+      "predicted": "Evaluation",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "para-vendor-pick",
+      "category": "genuine_fit",
+      "expected": "Model Routing",
+      "predicted": "RAG",
+      "outcome": "wrong_map"
+    },
+    {
+      "id": "para-prod-bug",
+      "category": "genuine_fit",
+      "expected": "Production Debugging",
+      "predicted": "Authentication",
+      "outcome": "wrong_map"
+    },
+    {
+      "id": "tech-typescript",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "tech-k8s",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "tech-postgres",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "tech-pytorch",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "prof-senior",
+      "category": "proficiency_phrasing",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "prof-fast-paced",
+      "category": "proficiency_phrasing",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "prof-cs-degree",
+      "category": "proficiency_phrasing",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "gap-finetune",
+      "category": "ontology_gap",
+      "expected": null,
+      "predicted": "Prompt/System Design",
+      "outcome": "false_positive"
+    },
+    {
+      "id": "gap-gpu",
+      "category": "ontology_gap",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "gap-mobile",
+      "category": "ontology_gap",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "near-llm-familiarity",
+      "category": "near_miss",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "near-copilot",
+      "category": "genuine_fit",
+      "expected": "AI-Assisted Development",
+      "predicted": "AI-Assisted Development",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "near-cloud",
+      "category": "near_miss",
+      "expected": null,
+      "predicted": "Authentication",
+      "outcome": "false_positive"
+    }
+  ]
+}

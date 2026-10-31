@@ -1,0 +1,62 @@
+{
+  "name": "heimdall-demand-mapping-benchmark",
+  "version": 1,
+  "description": "Labeled cases for the capability-demand extractor: each case is one requirement phrase as it appears in a job posting, with the canonical capability it should map to, or null when the correct behavior is to ABSTAIN (no canonical capability genuinely fits). Labels were written with AI assistance (Claude Code) against the canonical capability definitions in data/capabilities.json and should be reviewed by a human before being treated as ground truth.",
+  "categories": {
+    "genuine_fit": "The phrase names work that one canonical capability's definition covers.",
+    "technology_name_only": "The phrase only names a language/tool/technology. No canonical capability represents proficiency in a specific technology, so the correct output is abstention.",
+    "proficiency_phrasing": "General experience or seniority wording with no specific capability behind it. Correct output: abstain.",
+    "ontology_gap": "A real requirement that the current ontology has no capability for (e.g. production ML deployment). Correct output: abstain, and surface it as an ontology gap.",
+    "near_miss": "Topically close to a canonical capability but outside its definition. Mapping it is a false positive."
+  },
+  "cases": [
+    { "id": "aa-evals", "requirement": "evals", "expected": "Evaluation", "category": "genuine_fit", "source": "american_ai_public_posting" },
+    { "id": "aa-strong-python", "requirement": "Strong Python", "expected": null, "category": "technology_name_only", "source": "american_ai_public_posting", "note": "Historical failure: an earlier prompt version mapped this to CI/CD." },
+    { "id": "aa-llms", "requirement": "LLMs", "expected": null, "category": "technology_name_only", "source": "american_ai_public_posting" },
+    { "id": "aa-notebook-to-live", "requirement": "track record of taking models from notebook to live traffic", "expected": null, "category": "ontology_gap", "source": "american_ai_public_posting", "note": "Historical failure: an earlier prompt version mapped this to Prompt/System Design." },
+
+    { "id": "fit-rest-api", "requirement": "design and version REST APIs consumed by partner integrations", "expected": "API Design", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-oauth-sso", "requirement": "implement OAuth and SSO login flows", "expected": "Authentication", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-rbac", "requirement": "build role-based access control and per-tenant permissions", "expected": "Authorization", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-schema", "requirement": "model relational schemas, indexes, and migrations", "expected": "Database Design", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-idempotency", "requirement": "make payment webhooks safe to retry with idempotency keys", "expected": "Idempotency", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-queues", "requirement": "run background workers, queues, and cron jobs", "expected": "Job Scheduling", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-tracing", "requirement": "instrument services with metrics, tracing, and alerting", "expected": "Observability", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-incidents", "requirement": "lead incident investigations and root-cause analysis in production", "expected": "Production Debugging", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-gha", "requirement": "maintain GitHub Actions build, test, and deploy pipelines", "expected": "CI/CD", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-rls", "requirement": "write Postgres row-level security policies", "expected": "Database Security (Row-Level Security)", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-prompts", "requirement": "design system prompts that shape assistant behavior", "expected": "Prompt/System Design", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-agents", "requirement": "build multi-step agents that plan and call tools", "expected": "Agent Orchestration", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-function-calling", "requirement": "wire up function calling so the model can invoke internal APIs", "expected": "Tool Use", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-golden-sets", "requirement": "build golden test sets and graders to catch model regressions", "expected": "Evaluation", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-rag", "requirement": "ground answers in retrieved documents using embeddings and vector search", "expected": "RAG", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-routing", "requirement": "route requests between models based on cost and latency with fallbacks", "expected": "Model Routing", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-extraction", "requirement": "turn unstructured documents into validated JSON with schemas", "expected": "Structured Extraction", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-interviews", "requirement": "interview customers to uncover their problems", "expected": "Customer Discovery", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-specs", "requirement": "write specs with user stories and acceptance criteria", "expected": "Requirements", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-ab-tests", "requirement": "design controlled experiments with clear hypotheses and variables", "expected": "Experimental Design", "category": "genuine_fit", "source": "constructed" },
+    { "id": "fit-closing", "requirement": "prospect, pitch, and close enterprise accounts", "expected": "Sales", "category": "genuine_fit", "source": "constructed" },
+
+    { "id": "para-double-charge", "requirement": "make sure a customer is never billed twice when a request is resent", "expected": "Idempotency", "category": "genuine_fit", "source": "constructed", "note": "Paraphrase: shares almost no vocabulary with the definition, so keyword matching cannot find it." },
+    { "id": "para-model-swap", "requirement": "notice when answer quality drops after we switch the underlying model", "expected": "Evaluation", "category": "genuine_fit", "source": "constructed", "note": "Paraphrase." },
+    { "id": "para-vendor-pick", "requirement": "decide per request whether the cheap or the premium model should answer", "expected": "Model Routing", "category": "genuine_fit", "source": "constructed", "note": "Paraphrase." },
+    { "id": "para-prod-bug", "requirement": "figure out why checkout breaks only for some users after a release", "expected": "Production Debugging", "category": "genuine_fit", "source": "constructed", "note": "Paraphrase." },
+
+    { "id": "tech-typescript", "requirement": "TypeScript", "expected": null, "category": "technology_name_only", "source": "constructed" },
+    { "id": "tech-k8s", "requirement": "Docker and Kubernetes", "expected": null, "category": "technology_name_only", "source": "constructed", "note": "Topically near CI/CD and Distributed Systems, but names tools only." },
+    { "id": "tech-postgres", "requirement": "5+ years of PostgreSQL", "expected": null, "category": "technology_name_only", "source": "constructed" },
+    { "id": "tech-pytorch", "requirement": "hands-on experience with PyTorch", "expected": null, "category": "technology_name_only", "source": "constructed" },
+
+    { "id": "prof-senior", "requirement": "7+ years of professional software engineering experience", "expected": null, "category": "proficiency_phrasing", "source": "constructed" },
+    { "id": "prof-fast-paced", "requirement": "thrive in a fast-paced startup environment", "expected": null, "category": "proficiency_phrasing", "source": "constructed" },
+    { "id": "prof-cs-degree", "requirement": "BS in Computer Science or equivalent", "expected": null, "category": "proficiency_phrasing", "source": "constructed" },
+
+    { "id": "gap-finetune", "requirement": "fine-tune and distill open-weight models", "expected": null, "category": "ontology_gap", "source": "constructed", "note": "No canonical model-training capability exists yet." },
+    { "id": "gap-gpu", "requirement": "optimize GPU inference throughput", "expected": null, "category": "ontology_gap", "source": "constructed" },
+    { "id": "gap-mobile", "requirement": "ship native iOS and Android apps", "expected": null, "category": "ontology_gap", "source": "constructed" },
+
+    { "id": "near-llm-familiarity", "requirement": "familiarity with large language models", "expected": null, "category": "near_miss", "source": "constructed", "note": "Prompt/System Design's definition says general familiarity with LLMs is not that capability." },
+    { "id": "near-copilot", "requirement": "comfortable using AI coding assistants like Copilot", "expected": "AI-Assisted Development", "category": "genuine_fit", "source": "constructed", "note": "Looks like a tool name but the capability definition covers exactly this." },
+    { "id": "near-cloud", "requirement": "deploy services on AWS", "expected": null, "category": "near_miss", "source": "constructed", "note": "Hosting on a cloud vendor is not by itself CI/CD or Distributed Systems." }
+  ]
+}

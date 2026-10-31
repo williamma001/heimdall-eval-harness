@@ -1,0 +1,242 @@
+[
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "API Design",
+    "description": "Designing and evolving interfaces other software calls: REST/GraphQL/RPC endpoints, request/response contracts, versioning, and integrations. Knowing a programming language is not API Design."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Authentication",
+    "description": "Verifying user or service identity: login flows, sessions, OAuth/OIDC/SSO, tokens, passwords, and MFA."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Authorization",
+    "description": "Controlling what an authenticated identity may do: roles, permissions, scopes, access policies, and tenant isolation."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Database Design",
+    "description": "Modeling data: schemas, tables, relations, indexes, migrations, and query design."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Idempotency",
+    "description": "Making operations safe to retry or repeat without duplicate side effects: idempotency keys, deduplication, exactly-once handling."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Job Scheduling",
+    "description": "Background and scheduled work: queues, cron jobs, workers, retries, and long-running task orchestration."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Observability",
+    "description": "Instrumenting systems so behavior is visible: logging, metrics, tracing, dashboards, and alerting."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Distributed Systems",
+    "description": "Designing systems that span multiple services or machines: concurrency, consistency, networking, scaling, and fault tolerance. Using a specific infrastructure tool is not by itself this capability."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Production Debugging",
+    "description": "Diagnosing and fixing failures in live systems: incident investigation, root-cause analysis, and hotfixes."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "CI/CD",
+    "description": "Automated build, test, and deployment pipelines (for example GitHub Actions or release automation). General programming-language skill is not CI/CD."
+  },
+  {
+    "domain": "Software Engineering",
+    "family": "Backend Systems",
+    "name": "Database Security (Row-Level Security)",
+    "description": "Protecting data at the database layer: row-level security policies, grants, and least-privilege access."
+  },
+  {
+    "domain": "AI Engineering",
+    "family": "AI Product Integration",
+    "name": "Prompt/System Design",
+    "description": "Designing prompts, system instructions, and model interaction flows that shape LLM behavior in a product. General familiarity with LLMs is not by itself this capability."
+  },
+  {
+    "domain": "AI Engineering",
+    "family": "AI Product Integration",
+    "name": "Agent Orchestration",
+    "description": "Building multi-step or multi-agent LLM workflows that plan, call tools, and coordinate steps."
+  },
+  {
+    "domain": "AI Engineering",
+    "family": "AI Product Integration",
+    "name": "Tool Use",
+    "description": "Letting models call external functions or APIs (function calling, tool schemas) and handling the results."
+  },
+  {
+    "domain": "AI Engineering",
+    "family": "AI Product Integration",
+    "name": "Evaluation",
+    "description": "Measuring AI/model output quality: evals, test sets, benchmarks, graders, and regression testing of model behavior."
+  },
+  {
+    "domain": "AI Engineering",
+    "family": "AI Product Integration",
+    "name": "RAG",
+    "description": "Retrieval-augmented generation: embeddings, vector search, and grounding model answers in retrieved documents."
+  },
+  {
+    "domain": "AI Engineering",
+    "family": "AI Product Integration",
+    "name": "Model Routing",
+    "description": "Choosing among models or providers per request based on cost, latency, or quality, including fallbacks."
+  },
+  {
+    "domain": "AI Engineering",
+    "family": "AI Product Integration",
+    "name": "Structured Extraction",
+    "description": "Using models to turn unstructured text into validated structured data (schemas, JSON outputs, field extraction)."
+  },
+  {
+    "domain": "AI Engineering",
+    "family": "AI Product Integration",
+    "name": "AI-Assisted Development",
+    "description": "Using AI coding tools (copilots, code assistants) to build software faster. Not the same as building AI systems or knowing a language."
+  },
+  {
+    "domain": "Product",
+    "family": "Execution",
+    "name": "Customer Discovery",
+    "description": "Interviewing and learning from users or customers to find problems and needs."
+  },
+  {
+    "domain": "Product",
+    "family": "Execution",
+    "name": "Requirements",
+    "description": "Turning needs into clear specs, user stories, and acceptance criteria."
+  },
+  {
+    "domain": "Product",
+    "family": "Execution",
+    "name": "Prioritization",
+    "description": "Deciding what to build next by weighing impact, effort, and tradeoffs."
+  },
+  {
+    "domain": "Product",
+    "family": "Execution",
+    "name": "Prototyping",
+    "description": "Quickly building mockups or throwaway versions to test ideas."
+  },
+  {
+    "domain": "Product",
+    "family": "Execution",
+    "name": "Launch",
+    "description": "Releasing products or features to users: rollout planning, go-to-market coordination, and launch execution."
+  },
+  {
+    "domain": "Product",
+    "family": "Execution",
+    "name": "Iteration",
+    "description": "Improving a shipped product based on feedback, data, and results."
+  },
+  {
+    "domain": "Business",
+    "family": "Strategy & Operations",
+    "name": "Research",
+    "description": "Investigating markets, competitors, or industries to inform decisions."
+  },
+  {
+    "domain": "Business",
+    "family": "Strategy & Operations",
+    "name": "Strategy",
+    "description": "Setting direction: goals, positioning, and competitive choices."
+  },
+  {
+    "domain": "Business",
+    "family": "Strategy & Operations",
+    "name": "Communication",
+    "description": "Explaining ideas clearly to stakeholders in writing, presentations, and meetings."
+  },
+  {
+    "domain": "Business",
+    "family": "Strategy & Operations",
+    "name": "Sales",
+    "description": "Selling to customers: prospecting, pitching, negotiating, closing, and growing accounts."
+  },
+  {
+    "domain": "Business",
+    "family": "Strategy & Operations",
+    "name": "Operations",
+    "description": "Running and improving business processes, logistics, and day-to-day execution."
+  },
+  {
+    "domain": "Business",
+    "family": "Strategy & Operations",
+    "name": "Analysis",
+    "description": "Analyzing business data or problems to produce conclusions and recommendations."
+  },
+  {
+    "domain": "Research",
+    "family": "Methods",
+    "name": "Literature Analysis",
+    "description": "Reviewing and critically synthesizing published research and sources."
+  },
+  {
+    "domain": "Research",
+    "family": "Methods",
+    "name": "Data Collection",
+    "description": "Gathering data through surveys, experiments, scraping, or fieldwork."
+  },
+  {
+    "domain": "Research",
+    "family": "Methods",
+    "name": "Experimental Design",
+    "description": "Designing controlled studies or experiments: hypotheses, variables, and controls."
+  },
+  {
+    "domain": "Research",
+    "family": "Methods",
+    "name": "Statistical Interpretation",
+    "description": "Applying statistics to data and correctly interpreting the results."
+  },
+  {
+    "domain": "Research",
+    "family": "Methods",
+    "name": "Synthesis",
+    "description": "Combining findings from multiple sources into coherent insights."
+  },
+  {
+    "domain": "Creative",
+    "family": "Production",
+    "name": "Design",
+    "description": "Visual, UX, or product design: layouts, interfaces, and graphics."
+  },
+  {
+    "domain": "Creative",
+    "family": "Production",
+    "name": "Writing",
+    "description": "Producing clear written content such as articles, copy, and documentation."
+  },
+  {
+    "domain": "Creative",
+    "family": "Production",
+    "name": "Storytelling",
+    "description": "Crafting narratives that engage an audience."
+  },
+  {
+    "domain": "Creative",
+    "family": "Production",
+    "name": "Content Production",
+    "description": "Producing media content (video, audio, social) end to end."
+  }
+]
