@@ -37,15 +37,24 @@ Four cases are quoted from a public job posting. The rest were written for this 
 
 ## Results
 
-Offline predictors, reproducible with `npm run eval` and no API key:
+| Predictor | Accuracy | Mapping F1 | Abstention recall | False positives (of 15) | Missed fits | Cost for 42 cases |
+|---|---|---|---|---|---|---|
+| Always abstain (floor) | 0.36 | 0.00 | 1.00 | 0 | 27 | free |
+| Word overlap (naive) | 0.79 | 0.80 | 0.60 | 6 | 0 | free |
+| Word overlap + name-only rule | 0.83 | 0.82 | 0.80 | 3 | 1 | free |
+| **gpt-4o-mini** | **0.98** | **0.98** | **0.93** | **1** | **0** | **$0.008** |
+| gpt-4o | 0.98 | 0.98 | 0.93 | 1 | 0 | $0.140 |
 
-| Predictor | Accuracy | Mapping F1 | Abstention recall | False positives (of 15) | Missed fits |
-|---|---|---|---|---|---|
-| Always abstain (floor) | 0.36 | 0.00 | 1.00 | 0 | 27 |
-| Word overlap (naive) | 0.79 | 0.80 | 0.60 | **6** | 0 |
-| Word overlap + name-only rule | **0.83** | **0.82** | **0.80** | **3** | 1 |
+The offline rows are reproducible with `npm run eval` and no API key. The model rows come from a single live run on 2026-11-02, with temperature 0 and one API call per case. The raw outputs, including each model's stated reason, are in [`eval/demand-mapping/results/`](eval/demand-mapping/results/).
 
 ### What the results show
+
+1. **Both models clear the bar the rules couldn't.** Each scored 41 of 42, got every genuine fit right, and declined 14 of the 15 must-abstain cases. That includes the taxonomy gaps and near misses that no word rule could catch.
+2. **gpt-4o costs 17× more for exactly the same score.** On this benchmark, the cheaper model is the right choice.
+3. **Both models fail on the same case: "track record of taking models from notebook to live traffic."** The taxonomy has no skill for deploying machine-learning models, so the right answer is to decline. Instead, gpt-4o-mini tagged it as *CI/CD* and gpt-4o tagged it as *AI-Assisted Development*. Each model's stated reason explains the requirement correctly and then picks the closest-sounding skill anyway: the "topically close" failure this benchmark was built to catch. An earlier version of Heimdall's prompt failed on this same requirement.
+4. **The benchmark is now too easy to tell the two models apart.** They differ on only one case, and both get it wrong. The next step is harder must-abstain cases, more requirements quoted from real postings, and repeated runs to measure consistency.
+
+### What the offline baselines show
 
 1. **Word overlap behaves exactly as feared.** It tagged 6 of the 15 must-abstain cases. "familiarity with large language models" and even "LLMs" both became *Prompt/System Design*, and "deploy services on AWS" became *Authentication*.
 2. **A simple rule halves the false positives, but it hits a ceiling.** The rule says to abstain when a requirement is only a technology name plus proficiency words. It fixes 3 of the 6 false positives. The other 3 are 2 taxonomy gaps and 1 near miss, which need an understanding of meaning. No word rule can catch them.
@@ -71,7 +80,7 @@ npm test        # 15 tests: scorer maths on hand-checked inputs, benchmark valid
 npm run eval    # all offline predictors, comparison table, regression check (exit code 1 on regression)
 ```
 
-Optional, with your own OpenAI key (one API call per case, about 42 calls per model):
+Optional, with your own OpenAI key (42 calls per model; the run above cost about $0.15 in total):
 
 ```bash
 OPENAI_API_KEY=... npm run eval:live    # gpt-4o-mini and gpt-4o
@@ -87,6 +96,7 @@ eval/demand-mapping/scorer.mjs       outcome classification, metrics, regression
 eval/demand-mapping/run.mjs          offline predictors and command-line runner
 eval/demand-mapping/live.mjs         optional OpenAI predictor (prompt, output schema, cost)
 eval/demand-mapping/baseline.json    committed scores the regression check compares against
+eval/demand-mapping/results/         raw outputs from the live gpt-4o-mini and gpt-4o runs
 data/capabilities.json               the 40 skills with one-sentence definitions
 tests/demand-mapping-eval.test.mjs   test suite (no network)
 ```

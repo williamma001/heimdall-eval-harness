@@ -1,0 +1,363 @@
+{
+  "predictor": "live:gpt-4o-mini",
+  "metrics": {
+    "accuracy": 0.9762,
+    "mapping_precision": 0.9643,
+    "mapping_recall": 1,
+    "mapping_f1": 0.9818,
+    "abstention_precision": 1,
+    "abstention_recall": 0.9333,
+    "false_positive_rate": 0.0667
+  },
+  "counts": {
+    "correct_map": 27,
+    "wrong_map": 0,
+    "missed_map": 0,
+    "correct_abstain": 14,
+    "false_positive": 1
+  },
+  "per_case": [
+    {
+      "id": "aa-evals",
+      "category": "genuine_fit",
+      "expected": "Evaluation",
+      "predicted": "Evaluation",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "aa-strong-python",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "aa-llms",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "aa-notebook-to-live",
+      "category": "ontology_gap",
+      "expected": null,
+      "predicted": "CI/CD",
+      "outcome": "false_positive"
+    },
+    {
+      "id": "fit-rest-api",
+      "category": "genuine_fit",
+      "expected": "API Design",
+      "predicted": "API Design",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-oauth-sso",
+      "category": "genuine_fit",
+      "expected": "Authentication",
+      "predicted": "Authentication",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-rbac",
+      "category": "genuine_fit",
+      "expected": "Authorization",
+      "predicted": "Authorization",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-schema",
+      "category": "genuine_fit",
+      "expected": "Database Design",
+      "predicted": "Database Design",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-idempotency",
+      "category": "genuine_fit",
+      "expected": "Idempotency",
+      "predicted": "Idempotency",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-queues",
+      "category": "genuine_fit",
+      "expected": "Job Scheduling",
+      "predicted": "Job Scheduling",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-tracing",
+      "category": "genuine_fit",
+      "expected": "Observability",
+      "predicted": "Observability",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-incidents",
+      "category": "genuine_fit",
+      "expected": "Production Debugging",
+      "predicted": "Production Debugging",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-gha",
+      "category": "genuine_fit",
+      "expected": "CI/CD",
+      "predicted": "CI/CD",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-rls",
+      "category": "genuine_fit",
+      "expected": "Database Security (Row-Level Security)",
+      "predicted": "Database Security (Row-Level Security)",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-prompts",
+      "category": "genuine_fit",
+      "expected": "Prompt/System Design",
+      "predicted": "Prompt/System Design",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-agents",
+      "category": "genuine_fit",
+      "expected": "Agent Orchestration",
+      "predicted": "Agent Orchestration",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-function-calling",
+      "category": "genuine_fit",
+      "expected": "Tool Use",
+      "predicted": "Tool Use",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-golden-sets",
+      "category": "genuine_fit",
+      "expected": "Evaluation",
+      "predicted": "Evaluation",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-rag",
+      "category": "genuine_fit",
+      "expected": "RAG",
+      "predicted": "RAG",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-routing",
+      "category": "genuine_fit",
+      "expected": "Model Routing",
+      "predicted": "Model Routing",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-extraction",
+      "category": "genuine_fit",
+      "expected": "Structured Extraction",
+      "predicted": "Structured Extraction",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-interviews",
+      "category": "genuine_fit",
+      "expected": "Customer Discovery",
+      "predicted": "Customer Discovery",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-specs",
+      "category": "genuine_fit",
+      "expected": "Requirements",
+      "predicted": "Requirements",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-ab-tests",
+      "category": "genuine_fit",
+      "expected": "Experimental Design",
+      "predicted": "Experimental Design",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "fit-closing",
+      "category": "genuine_fit",
+      "expected": "Sales",
+      "predicted": "Sales",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "para-double-charge",
+      "category": "genuine_fit",
+      "expected": "Idempotency",
+      "predicted": "Idempotency",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "para-model-swap",
+      "category": "genuine_fit",
+      "expected": "Evaluation",
+      "predicted": "Evaluation",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "para-vendor-pick",
+      "category": "genuine_fit",
+      "expected": "Model Routing",
+      "predicted": "Model Routing",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "para-prod-bug",
+      "category": "genuine_fit",
+      "expected": "Production Debugging",
+      "predicted": "Production Debugging",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "tech-typescript",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "tech-k8s",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "tech-postgres",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "tech-pytorch",
+      "category": "technology_name_only",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "prof-senior",
+      "category": "proficiency_phrasing",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "prof-fast-paced",
+      "category": "proficiency_phrasing",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "prof-cs-degree",
+      "category": "proficiency_phrasing",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "gap-finetune",
+      "category": "ontology_gap",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "gap-gpu",
+      "category": "ontology_gap",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "gap-mobile",
+      "category": "ontology_gap",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "near-llm-familiarity",
+      "category": "near_miss",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    },
+    {
+      "id": "near-copilot",
+      "category": "genuine_fit",
+      "expected": "AI-Assisted Development",
+      "predicted": "AI-Assisted Development",
+      "outcome": "correct_map"
+    },
+    {
+      "id": "near-cloud",
+      "category": "near_miss",
+      "expected": null,
+      "predicted": null,
+      "outcome": "correct_abstain"
+    }
+  ],
+  "cost_usd": 0.00834645,
+  "latency_ms": 44152,
+  "input_tokens": 49983,
+  "output_tokens": 1415,
+  "reasons": {
+    "aa-evals": "The requirement 'evals' refers to measuring AI/model output quality, which aligns with the definition of the Evaluation skill.",
+    "aa-strong-python": "A bare technology or tool name (in this case, a programming language) is not a skill on the provided list.",
+    "aa-llms": "The requirement 'LLMs' does not specify a task or work that aligns with any of the defined skills. It is simply a technology name without context.",
+    "aa-notebook-to-live": "The requirement describes the process of moving models from development (notebook) to production (live traffic), which aligns with the concept of automated build, test, and deployment pipelines.",
+    "fit-rest-api": "The requirement involves designing and evolving interfaces (REST APIs) that other software (partner integrations) will call, which aligns directly with the definition of API Design.",
+    "fit-oauth-sso": "The requirement involves verifying user identity through OAuth and SSO, which falls under the definition of Authentication.",
+    "fit-rbac": "The requirement involves controlling what an authenticated identity may do, specifically through role-based access control and per-tenant permissions, which aligns with the definition of Authorization.",
+    "fit-schema": "The requirement describes the modeling of data structures, which aligns with the definition of Database Design.",
+    "fit-idempotency": "The requirement specifically mentions making payment webhooks safe to retry with idempotency keys, which directly relates to the definition of Idempotency.",
+    "fit-queues": "The requirement describes the need to manage background work, queues, and scheduled tasks, which aligns directly with the definition of Job Scheduling.",
+    "fit-tracing": "The requirement describes the process of instrumenting systems to make their behavior visible, which aligns with the definition of Observability.",
+    "fit-incidents": "The requirement involves diagnosing and fixing failures in live systems, which aligns with the definition of Production Debugging.",
+    "fit-gha": "The requirement involves maintaining automated build, test, and deployment pipelines, which directly aligns with the definition of CI/CD.",
+    "fit-rls": "The requirement specifically involves creating row-level security policies in Postgres, which directly aligns with the skill of protecting data at the database layer.",
+    "fit-prompts": "The requirement specifically involves designing prompts that influence the behavior of an assistant, which aligns directly with the definition of Prompt/System Design.",
+    "fit-agents": "The requirement describes building multi-step agents that plan and call tools, which aligns directly with the definition of Agent Orchestration.",
+    "fit-function-calling": "The requirement describes enabling models to call external functions or APIs, which aligns with the definition of Tool Use.",
+    "fit-golden-sets": "The requirement involves measuring AI/model output quality through the creation of test sets and graders, which aligns with the definition of Evaluation.",
+    "fit-rag": "The requirement describes the process of retrieval-augmented generation, specifically using embeddings and vector search to ground answers in retrieved documents.",
+    "fit-routing": "The requirement describes the process of choosing among models based on cost, latency, and including fallbacks, which aligns directly with the definition of Model Routing.",
+    "fit-extraction": "The requirement describes the process of using models to convert unstructured text into structured data formats like JSON, which aligns with the definition of Structured Extraction.",
+    "fit-interviews": "The requirement involves interviewing customers to learn about their problems and needs, which directly aligns with the definition of Customer Discovery.",
+    "fit-specs": "The requirement involves turning needs into clear specifications, user stories, and acceptance criteria, which aligns directly with the skill of Requirements.",
+    "fit-ab-tests": "The requirement specifically mentions designing controlled experiments, which aligns directly with the definition of Experimental Design.",
+    "fit-closing": "The requirement involves selling to customers, which includes prospecting, pitching, and closing deals, all of which fall under the skill of Sales.",
+    "para-double-charge": "The requirement describes the need to ensure that operations (billing requests) are safe to retry without causing duplicate side effects, which aligns with the definition of Idempotency.",
+    "para-model-swap": "The requirement involves measuring the quality of AI/model output, which aligns with the skill of Evaluation.",
+    "para-vendor-pick": "The requirement involves choosing among models based on cost, which aligns with the definition of Model Routing.",
+    "para-prod-bug": "The requirement involves diagnosing and fixing failures in a live system, which aligns with the definition of Production Debugging.",
+    "tech-typescript": "A bare technology or tool name (like TypeScript) is not a skill on the provided list.",
+    "tech-k8s": "Docker and Kubernetes are technologies/tools, not skills defined in the provided list.",
+    "tech-postgres": "The requirement mentions a specific technology (PostgreSQL), which does not correspond to any of the defined skills.",
+    "tech-pytorch": "The requirement mentions a specific technology (PyTorch), which does not correspond to any of the defined skills.",
+    "prof-senior": "Seniority, years of experience, degrees and personality traits are not skills.",
+    "prof-fast-paced": "The requirement describes a personality trait or work style rather than a specific skill related to the defined categories.",
+    "prof-cs-degree": "Seniority, years of experience, degrees and personality traits are not skills.",
+    "gap-finetune": "The requirement does not align with any of the defined skills, as it pertains to model training and optimization rather than a specific skill listed.",
+    "gap-gpu": "The requirement does not align with any of the defined skills, as it pertains to optimizing hardware performance rather than a specific software development or design skill.",
+    "gap-mobile": "The requirement describes shipping mobile applications but does not align with any specific skill from the provided list.",
+    "near-llm-familiarity": "The requirement describes a general familiarity with large language models, which does not align with any specific skill definition provided.",
+    "near-copilot": "The requirement describes using AI coding tools to build software faster, which aligns with the definition of AI-Assisted Development.",
+    "near-cloud": "The requirement mentions a specific cloud provider (AWS) but does not describe work that aligns with any of the defined skills."
+  }
+}
